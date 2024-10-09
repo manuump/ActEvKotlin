@@ -44,6 +44,16 @@ fun main() {
         else x * y * z
     }
 
+    //paso3
+    val funcionDos = { a: Double, b: Double, c: Double, sumLambda: (Array<Double>) -> Double ->
+        val array = arrayOf(a, b, c)
+        sumLambda(array)
+    }
+
+    val sumatorioLambda = { array: Array<Double> ->
+        array.sum()
+    }
+
     val resultado1 = funcionUno(1.0, -3.0, 2.0, ecuacionSegundoGrado)
     println("Resultado para (1, -3, 2): $resultado1")
 
@@ -61,4 +71,7 @@ fun main() {
 
     val resultadoMultiplicacionCero = multiplicacion(0.0, 0.0, 0.0)
     println("Resultado de la multiplicación para (0, 0, 0): $resultadoMultiplicacionCero")
+
+    val resultadoSumatorio = funcionDos(1.0, 2.0, 3.0, sumatorioLambda)
+    println("Resultado del sumatorio para (1, 2, 3): $resultadoSumatorio")
 }
