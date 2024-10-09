@@ -28,6 +28,12 @@ fun main() {
         }
     }
 
+    //Inicializar Array en main
+    val array = Array(10) {
+        it.toDouble()
+    }
+    println("Array inicializado : ${array.joinToString()}")
+
     val funcionUno = { a: Double, b: Double, c: Double, solver: (Double, Double, Double) -> Array<Double> ->
         val resultados = solver(a, b, c)
         when (resultados[0]) {
