@@ -38,6 +38,12 @@ fun main() {
         }
     }
 
+    //paso2
+    val multiplicacion = { x: Double, y: Double, z: Double ->
+        if (x == 0.0 && y == 0.0 && z == 0.0) 1.0
+        else x * y * z
+    }
+
     val resultado1 = funcionUno(1.0, -3.0, 2.0, ecuacionSegundoGrado)
     println("Resultado para (1, -3, 2): $resultado1")
 
@@ -49,4 +55,10 @@ fun main() {
 
     val resultado4 = funcionUno(1.0, 2.0, 3.0, ecuacionSegundoGrado)
     println("Resultado para (1, 2, 3): $resultado4")
+
+    val resultadoMultiplicacion = multiplicacion(2.0, 3.0, 4.0)
+    println("Resultado de la multiplicación para (2, 3, 4): $resultadoMultiplicacion")
+
+    val resultadoMultiplicacionCero = multiplicacion(0.0, 0.0, 0.0)
+    println("Resultado de la multiplicación para (0, 0, 0): $resultadoMultiplicacionCero")
 }
